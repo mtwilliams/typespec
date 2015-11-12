@@ -17,19 +17,19 @@ module Defines
   end
 end
 
-Defines.typespec.matches?('YETI_LINKAGE' => 'YETI_LINKAGE_STATIC',
-                          '__YETI_IS_BEING_COMPILED__' => true,
-                          'YETI_CONFIGURATION' => 'YETI_CONFIGURATION_DEBUG',
-                          '_HAS_EXCEPTIONS' => false,
-                          '_SCL_SECURE_NO_WARNINGS' => true,
-                          '_CRT_SECURE_NO_WARNINGS' => true,
-                          '_CRT_SECURE_NO_DEPRECATE' => true,
-                          '_SECURE_SCL_THROWS' => false,
-                          '_SILENCE_DEPRECATION_OF_SECURE_SCL_THROWS' => true,
-                          '_USING_V110_SDK71_' => true,
-                          '_DEBUG' => true,
-                          '_HAS_ITERATOR_DEBUGGING' => true,
-                          '_SECURE_SCL' => true)
+Defines.typespec.valid?('YETI_LINKAGE' => 'YETI_LINKAGE_STATIC',
+                        '__YETI_IS_BEING_COMPILED__' => true,
+                        'YETI_CONFIGURATION' => 'YETI_CONFIGURATION_DEBUG',
+                        '_HAS_EXCEPTIONS' => false,
+                        '_SCL_SECURE_NO_WARNINGS' => true,
+                        '_CRT_SECURE_NO_WARNINGS' => true,
+                        '_CRT_SECURE_NO_DEPRECATE' => true,
+                        '_SECURE_SCL_THROWS' => false,
+                        '_SILENCE_DEPRECATION_OF_SECURE_SCL_THROWS' => true,
+                        '_USING_V110_SDK71_' => true,
+                        '_DEBUG' => true,
+                        '_HAS_ITERATOR_DEBUGGING' => true,
+                        '_SECURE_SCL' => true)
 
 #=> true
 ```
