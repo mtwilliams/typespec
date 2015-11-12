@@ -1,0 +1,47 @@
+body {
+  font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+button:last-child,
+.button:last-child,
+input:last-child,
+textarea:last-child,
+select:last-child,
+fieldset:last-child,
+pre:last-child,
+blockquote:last-child,
+dl:last-child,
+figure:last-child,
+table:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+form:last-child {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+header {
+  margin-top: 5rem;
+}
+
+a {
+  color: #000;
+  padding: 0.333rem;
+  margin: 0 -0.166rem;
+  font-weight: 700;
+}
+a:hover {
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+}
+
+code {
+  white-space:nowrap;
+}
