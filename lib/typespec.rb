@@ -82,7 +82,7 @@ module Typespec
     end
 
     def valid?(value)
-      if value.is_a? Array
+      if value.is_a? ::Array
         value.all?{|element| @element.valid?(element)}
       else
         false
@@ -105,7 +105,7 @@ module Typespec
     end
 
     def valid?(value)
-      if value.is_a? Hash
+      if value.is_a? ::Hash
         value.all? do |k, v|
           @pairs.any? do |pair|
             pair.zip([k,v]).all? {|typespec, value| typespec.valid?(value)}
@@ -137,7 +137,7 @@ module Typespec
     end
 
     def valid?(struct, opts={})
-      if struct.instance_of? Object
+      if struct.instance_of? ::Object
         ignore_if_not_in_spec = opts.fetch(:ignore_if_not_in_spec, false)
         struct.instance_variables.all? do |property|
           undecorated = property.to_s[1..-1].to_sym
