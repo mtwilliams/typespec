@@ -95,12 +95,12 @@ module Typespec
 
   # ...
   class Hash
-    def initialize(**pairs)
+    def initialize(pairs={})
       @pairs = pairs
-      @pairs ||= {Typespec.any => Typespec.any}
+      @pairs = {Typespec.any => Typespec.any} if @pairs.nil? or @pairs.empty?
     end
 
-    def self.[](**pairs)
+    def self.[](pairs={})
       Typespec::Hash.new(**pairs)
     end
 
