@@ -40,7 +40,7 @@ module Typespec
   # ...
   class Or
     def initialize(expects); @expects = [*expects]; end
-    def self.[](expects); self.new(expects); end
+    def self.[](*expects); self.new(*expects); end
     def valid?(value); @expects.any?{|expects| expects.valid?(value)}; end
   end
 
