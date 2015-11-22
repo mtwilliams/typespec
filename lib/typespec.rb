@@ -7,7 +7,10 @@ module Typespec
   # TODO(mtwilliams): Document this monstrosity.
 
   # ...
-  def self.any; Typespec::Any; end
+  def self.nothing; Typespec.nil; end
+
+  # ...
+  def self.anything; Typespec::Any; end
 
   # ...
   class Any
@@ -97,7 +100,7 @@ module Typespec
   class Hash
     def initialize(pairs={})
       @pairs = pairs
-      @pairs = {Typespec.any => Typespec.any} if @pairs.nil? or @pairs.empty?
+      @pairs = {Typespec.anything => Typespec.anything} if @pairs.nil? or @pairs.empty?
     end
 
     def self.[](pairs={})
@@ -124,7 +127,7 @@ module Typespec
   class Struct
     def initialize(*properties, **properties_with_spec)
       if !properties.empty?
-        @properties = Hash[properties.map{|name| [name, Typespec.any]}]
+        @properties = Hash[properties.map{|name| [name, Typespec.anything]}]
       elsif properties_with_spec
         @properties = properties_with_spec
       else
