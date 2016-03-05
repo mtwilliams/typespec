@@ -41,7 +41,7 @@ module Typespec
     end
 
     module VERSION #:nodoc:
-      MAJOR, MINOR, PATCH, PRE = [0, 1, 0, 7]
+      MAJOR, MINOR, PATCH, PRE = [0, 1, 0, 8]
       STRING = [MAJOR, MINOR, PATCH, PRE].compact.join('.')
     end
 
