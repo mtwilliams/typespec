@@ -140,7 +140,7 @@ module Typespec
     end
 
     def valid?(struct, opts={})
-      if struct.instance_of? ::Object
+      if struct.is_a? ::Struct
         ignore_if_not_in_spec = opts.fetch(:ignore_if_not_in_spec, false)
         struct.instance_variables.all? do |property|
           undecorated = property.to_s[1..-1].to_sym
