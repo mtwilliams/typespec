@@ -176,9 +176,9 @@ module Typespec
 
   # ...
   class Enum
-    def initialize(*can_take_on) @can_take_on = [*can_take_on] end
-    def self.[](*can_take_on); Typespec::Enum.new(can_take_on); end
-    def valid?(can_take_on) can_take_on.include?(@can_take_on); end
+    def initialize(*can_take_on) @can_take_on = can_take_on end
+    def self.[](*can_take_on); Typespec::Enum.new(*can_take_on); end
+    def valid?(value) @can_take_on.include?(value); end
   end
 end
 
