@@ -180,6 +180,15 @@ module Typespec
     def self.[](*can_take_on); Typespec::Enum.new(*can_take_on); end
     def valid?(value) @can_take_on.include?(value); end
   end
+
+  # ...
+  def self.fn; Typespec::Function; end
+  def self.function; Typespec::Function; end
+
+  # ...
+  class Function
+    def self.valid?(value) value.responds_to?(:call); end
+  end
 end
 
 
