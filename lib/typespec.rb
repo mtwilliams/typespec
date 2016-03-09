@@ -187,7 +187,7 @@ module Typespec
 
   # ...
   class Function
-    def self.valid?(value) value.responds_to?(:call); end
+    def self.valid?(value) value.respond_to?(:call); end
   end
 end
 
